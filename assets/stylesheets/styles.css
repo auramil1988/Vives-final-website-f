@@ -4,6 +4,7 @@ background: url('../images/vives1.jpg') no-repeat center center fixed;
 -moz-background-size: cover;
 -o-background-size: cover;
 background-size: cover;
+position: absolute;
 }
 
 
@@ -135,7 +136,7 @@ a:hover
 {
   position: absolute;
   width: 400px;
-  height: 700px;
+  height: 800px;
   margin: -100px 0 0 -50px;
   padding: 50px;
   padding-top: 125px;
