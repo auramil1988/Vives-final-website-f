@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>discography</title>
+<link rel="stylesheet" href="./assets/stylesheets/discographystyles.css"/>
+<link rel="stylesheet" href="../assets/stylesheets/lightbox.min.css">
+
+<head>
+
+<header>
+
+<div class ="wrapper">
+
+  <h1>Discography
+      </h1>
+  </div>
+
+
+<nav role="navigation">
+  <div id="menuToggle">
+    <!--
+    A fake / hidden checkbox is used as click reciever,
+    so you can use the :checked selector on it.
+    -->
+    <input type="checkbox" />
+
+    <!--
+    Some spans to act as a hamburger.
+
+    They are acting like a real hamburger,
+    not that McDonalds stuff.
+    -->
+    <span></span>
+    <span></span>
+    <span></span>
+
+    <!--
+    Too bad the menu has to be inside of the button
+    but hey, it's pure CSS magic.
+    -->
+    <ul id="menu">
+      <a href="index.html"><li>Home</li></a>
+      <a href="about.html"><li>Vives</li></a>
+      <a href="spotify.html"><li>Discography</li></a>
+      <a href="media.html"><li>Media</li></a>
+      <a href="shop.html"><li>Shop</li></a>
+      <a href="tour.html"><li>Tour</li></a>
+      <!-- <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a> -->
+    </ul>
+  </div>
+</nav>
+
+</header>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 30px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+
+
+
+<div class="row">
+  <div class="column">
+
+  <a class="example-image-link" href="https://open.spotify.com/album/57giaIaMyAVCS7jMIaoIgK?si=-MgUT8keTCOH853jqv5Pow" data-lightbox="Vives" > <img class="Vives-Spotify" src="./assets/images/vives7.png" alt="Vives"  width="500" height="500"/> </a>
+  <!-- <a href="https://open.spotify.com/album/57giaIaMyAVCS7jMIaoIgK?si=-MgUT8keTCOH853jqv5Pow">
+    <img src="./assets/images/vives7.png" alt="Vives" style="width:100%" />
+  </a> -->
+
+</div>
+  <div class="column">
+
+      <a class="example-image-link" href="https://open.spotify.com/track/5zqb9vPcTA8rCwvIJQSxoO?si=F_RcelvlT6SOyQm_d9yzlw" data-lightbox="Vives"><img class="Vives-Spotify" src="./assets/images/vives8.jpg" alt="Vives" width="500" height="500" /></a>
+  </div>
+  <div class="column">
+    <a class="example-image-link" href="https://open.spotify.com/track/5zqb9vPcTA8rCwvIJQSxoO?si=F_RcelvlT6SOyQm_d9yzlw" data-lightbox="Vives"><img class="Vives-Spotify" src="./assets/images/vives9.jpg" alt="Vives"  width="500" height="500" /></a>
+
+  </div>
+</div>
+
+        <div class="row">
+          <div class="column">
+            <h3>Album Name: Vives</h3>
+<p> Releade Year: 2017</p>
+
+<p>Genre: Vallenato</p>
+
+<p>Song Number: 18</p>
+
+
+
+          </div>
+          <div class="column">
+            <h3>Album Name: La Tierra Del Olvido</h3>
+<p> Releade Year: 1995</p>
+
+<p>Genre: Vallenato</p>
+
+<p>Song Number: 11</p>
+</div>
+
+<div class="column">
+  <h3>Album Name: Corazon Profundo</h3>
+<p> Releade Year: 2013</p>
+
+<p>Genre: Vallenato</p>
+
+<p>Song Number: 16</p>
+    </div>
+
+          </div>
+
+        </div>
+  <script src="../assets/javascripts/lightbox.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>tour</title>
+<link rel="stylesheet" href="./assets/stylesheets/tourstyle.css"/>
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/images/vives14.jpg");
+  height: 60%;
+    font-family: "Avenir Next", "Avenir", sans-serif;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 95%;
+  position: relative;
+
+}
+
+.hero-text {
+
+  text-align: left;
+  marging:80px;
+  /* align:right; */
+  position: absolute;
+  top: 40%;
+  /* bottom:50%; */
+    left: 70%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+table {
+  font-family:"Avenir Next", "Avenir", sans-serif;
+  font-size: 20px;
+  border-collapse: collapse;
+  width: 90%;
+  position: center;
+  align-content: center;
+  color: black;
+}
+
+td, th {
+  border:none;
+  text-align: center;
+  padding: 8px;
+
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+<head>
+
+<header>
+
+<div class ="wrapper">
+
+  <h1>Tour
+      </h1>
+  </div>
+
+
+<nav role="navigation">
+  <div id="menuToggle">
+    <!--
+    A fake / hidden checkbox is used as click reciever,
+    so you can use the :checked selector on it.
+    -->
+    <input type="checkbox" />
+
+    <!--
+    Some spans to act as a hamburger.
+
+    They are acting like a real hamburger,
+    not that McDonalds stuff.
+    -->
+    <span></span>
+    <span></span>
+    <span></span>
+
+    <!--
+    Too bad the menu has to be inside of the button
+    but hey, it's pure CSS magic.
+    -->
+    <ul id="menu">
+      <a href="index.html"><li>Home</li></a>
+      <a href="about.html"><li>Vives</li></a>
+      <a href="discography.html"><li>Discography</li></a>
+    <a href="spotify.html"><li>Discography</li></a>
+      <a href="shop.html"><li>Shop</li></a>
+      <a href="tour.html"><li>Tour</li></a>
+      <!-- <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a> -->
+    </ul>
+  </div>
+</nav>
+
+</header>
+<body>
+
+  <div class="hero-image">
+    <div class="hero-text">
+      <h2 style="font-size:70px" margin:20px;> VIVES  </h2>
+          <h2 style="font-size:70px" margin:20px;> USA TOUR 2019</h2>
+    </div>
+  </div>
+<div>
+  <h3 >Tour Dates</h3>
+
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Venue</th>
+    <th>Location</th>
+    <th>Buy</th>
+  </tr>
+  <tr>
+    <td>May 19</td>
+    <td>17:00</td>
+    <td>Oracle Arena</td>
+    <td>Oakland</td>
+  <td><a class="ticket" href="https://www.ticketsmarter.com/">Ticket Master</a>
+  </td>
+  </tr>
+  <tr>
+    <td>Jun 24</td>
+    <td>20:00</td>
+    <td>Sap Center</td>
+      <td>San Jose</td>
+        <td><a class="ticket" href="https://www.ticketsmarter.com/">Ticket Master</a>
+            </td>
+  </tr>
+  <tr>
+    <td>July 7</td>
+    <td>19:00</td>
+    <td>Levis Stadium</td>
+    <td>Santa Clara</td>
+    <td><a class="ticket" href="https://www.ticketsmarter.com/">Ticket Master</a>
+        </td>
+  </tr>
+  <tr>
+    <td>Aug 27</td>
+    <td>20:00</td>
+    <td>At&t Park</td>
+    <td>San Francisco</td>
+    <td><a class="ticket" href="https://www.ticketsmarter.com/">Ticket Master</a>
+        </td>
+  </tr>
+
+</table>
+  </div>
+</body>
+</html>

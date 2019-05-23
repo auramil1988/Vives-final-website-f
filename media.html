@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>media</title>
+<link rel="stylesheet" href="./assets/stylesheets/media.css"/>
+<link rel="stylesheet" href="../assets/stylesheets/lightbox.min.css">
+
+<head>
+
+<header>
+
+<div class ="wrapper">
+
+  <h1>Media
+      </h1>
+  </div>
+
+
+<nav role="navigation">
+  <div id="menuToggle">
+    <!--
+    A fake / hidden checkbox is used as click reciever,
+    so you can use the :checked selector on it.
+    -->
+    <input type="checkbox" />
+
+    <!--
+    Some spans to act as a hamburger.
+
+    They are acting like a real hamburger,
+    not that McDonalds stuff.
+    -->
+    <span></span>
+    <span></span>
+    <span></span>
+
+    <!--
+    Too bad the menu has to be inside of the button
+    but hey, it's pure CSS magic.
+    -->
+    <ul id="menu">
+      <a href="index.html"><li>Home</li></a>
+      <a href="about.html"><li>Vives</li></a>
+      <a href="spotify.html"><li>Discography</li></a>
+      <a href="media.html"><li>Media</li></a>
+      <a href="shop.html"><li>Shop</li></a>
+      <a href="tour.html"><li>Tour</li></a>
+      <!-- <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a> -->
+    </ul>
+  </div>
+</nav>
+
+</header>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.row > .column {
+  padding: 0 8px;
+  display: grid;
+}
+
+.row:after {
+  content: "";
+  display: grid;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 33%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.8);
+
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  width: 80%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 30%;
+  /* bottom: 50%: */
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  /* background-color: rgba(0, 0, 0, 0.8); */
+  color: white;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  margin-top: 10px;
+  position: absolute;
+  top: 0;
+}
+
+img {
+  margin-bottom: -4px;
+  display: grid;
+  margin:0 0;
+
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+</style>
+<body>
+
+<h3>Photos</h3>
+
+<div class="row">
+  <div class="column">
+    <img src="./assets/images/vives17.jpg"  onclick="openModal();currentSlide(1)" class="hover-shadow cursor" alt="vives" width="575" height="325"/>
+  </div>
+  <div class="column">
+    <img src="./assets/images/vives5.jpg" width="575" height="325" onclick="openModal();currentSlide(2)" class="hover-shadow cursor"alt="vives" />
+  </div>
+  <div class="column">
+    <img src="./assets/images/vives4.jpg" width="575" height="325" onclick="openModal();currentSlide(3)" class="hover-shadow cursor"alt="vives" />
+  </div>
+  <div class="column">
+    <img src="./assets/images/vives12.jpg" width="575" height="325" onclick="openModal();currentSlide(4)" class="hover-shadow cursor"alt="vives">
+  </div>
+  <div class="column">
+    <img src="./assets/images/vives15.jpg" width="575" height="325" onclick="openModal();currentSlide(5)" class="hover-shadow cursor"alt="vives">
+  </div>
+  <div class="column">
+    <img src="./assets/images/vives16.jpg" width="575" height="325" onclick="openModal();currentSlide(6)" class="hover-shadow cursor"alt="vives">
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 6</div>
+      <img src="./assets/images/vives17.jpg" style="width:100%" >
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 6</div>
+      <img src="./assets/images/vives5.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 6</div>
+      <img src="./assets/images/vives4.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 6</div>
+      <img src="./assets/images/vives12.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">5 / 6</div>
+      <img src="./assets/images/vives15.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">6 / 6</div>
+      <img src="./assets/images/vives16.jpg" style="width:100%">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <!-- <div class="caption-container">
+      <p id="caption"></p>
+    </div> -->
+
+
+    <div class="column">
+      <img class="demo cursor" src="./assets/images/vives17.jpg" style="width:100%" onclick="currentSlide(1)" alt="Vives jean jacket" >
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./assets/images/vives5.jpg" style="width:100%" onclick="currentSlide(2)" alt="Vives in the forest">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./assets/images/vives4.jpg" style="width:100%" onclick="currentSlide(3)" alt="Vives in the forest with hoodie">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./assets/images/vives12.jpg" style="width:100%" onclick="currentSlide(4)" alt="Vives black background">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./assets/images/vives11.jpg" style="width:100%" onclick="currentSlide(4)" alt="Vives in concert">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./assets/images/vives16.jpg" style="width:100%" onclick="currentSlide(4)" alt="Vives light background">
+    </div>
+  </div>
+</div>
+
+
+<h4> Videos </h4>
+
+<div class="video" style="float">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gL4x2zG_6Yo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-UV0QGLmYys" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CJ_zRSv3Hr8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+
+<script>
+function openModal() {
+  document.getElementById("myModal").style.display = "grid";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+
+
+</body>
+
+</html>
